@@ -1,0 +1,40 @@
+.app-navbar {
+  background-color: #212529;
+}
+
+.app-brand {
+  color: var(--brand);
+  font-weight: 400;
+
+  &:hover,
+  &:focus {
+    color: var(--brand-hover);
+  }
+}
+
+.app-nav-link {
+  &:hover,
+  &:focus {
+    color: var(--brand);
+  }
+}
+
+.app-search-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.25rem rgba(114, 221, 120, 0.25);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(114, 221, 120, 0.4);
+}
+
+// On mobile the search field takes the whole width of the opened menu.
+@media (max-width: 991.98px) {
+  form[role='search'] {
+    margin-top: 0.5rem;
+  }
+
+  .app-search-input {
+    flex: 1 1 auto;
+  }
+}

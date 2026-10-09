@@ -1,0 +1,96 @@
+<section class="container rental-page">
+  <h1 class="page-title">Séf Bérlés</h1>
+
+  <app-date-range-picker [minDate]="minDate" [range]="range()" (rangeChange)="onRangeChange($event)" />
+
+  @if (days() !== null) {
+    <p class="range-summary" data-testid="range-summary">
+      {{ range().start }} – {{ range().end }} ({{ days() }} nap)
+    </p>
+  }
+
+  @if (selectedChef(); as chef) {
+    <div class="selected-chef" data-testid="selected-chef">
+      <h2 class="h5">A Séf</h2>
+      <div class="selected-row">
+        <span class="sel-name">{{ chef.name }}</span>
+        <span class="sel-cuisine">{{ chef.cuisine }}</span>
+        <span class="sel-rate"><small class="sel-label">Napi díj</small>{{ chef.dailyRate }} €</span>
+        <span class="sel-fee"><small class="sel-label">Alap díj</small>{{ chef.baseFee }} €</span>
+        <button type="button" class="btn btn-brand btn-sm" (click)="removeChef()">Eltávolít</button>
+      </div>
+      @if (estimate() !== null) {
+        <p class="estimate mb-0">Becsült végösszeg: <strong>{{ estimate() }} €</strong></p>
+      }
+      <hr />
+    </div>
+  }
+
+  @if (notice(); as n) {
+    <div
+      class="alert rental-alert"
+      [class.alert-success]="n.type === 'success'"
+      [class.alert-danger]="n.type === 'error'"
+      role="alert"
+      data-testid="rental-notice"
+    >
+      <h2 class="alert-heading h4">{{ n.title }}</h2>
+      <p class="mb-0">{{ n.message }}</p>
+      @if (n.details) {
+        <p class="mb-0 mt-1 small">{{ n.details }}</p>
+      }
+    </div>
+  }
+
+  <button type="button" class="btn btn-brand submit-btn" [disabled]="!canSubmit()" (click)="submit()" data-testid="submit">
+    @if (submitting()) {
+      <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Küldés...
+    } @else {
+      Foglalás elküldése
+    }
+  </button>
+  @if (!selectedChef() || !range().end) {
+    <p class="hint small text-body-secondary">
+      A foglaláshoz válasszon egy séfet és egy időszakot (a kezdő és a záró nap is számít, legalább 3, legfeljebb 14 nap, a kezdés legkorábban holnap lehet).
+    </p>
+  }
+
+  <h2 class="list-title h4">Elérhető séfek</h2>
+
+  @if (loading()) {
+    <div class="state-box" role="status" data-testid="loading">
+      <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Séfek betöltése...
+    </div>
+  } @else if (loadFailed()) {
+    <div class="alert alert-danger" role="alert" data-testid="load-error">
+      <h3 class="alert-heading h5">A séfek betöltése nem sikerült</h3>
+      <p class="mb-2">Sem a távoli forrás, sem a helyi tartalék adatok nem érhetők el.</p>
+      <button type="button" class="btn btn-brand btn-sm" (click)="loadChefs()">Újrapróbálom</button>
+    </div>
+  } @else {
+    @if (usedFallbackAfterError()) {
+      <div class="alert alert-warning py-2 small" role="status" data-testid="fallback-note">
+        A távoli séflista nem érhető el, ezért a helyi tartalék adatokat látja.
+      </div>
+    }
+    @if (visibleChefs().length === 0) {
+      <div class="empty-state" data-testid="empty-state">
+        <h3 class="h5">Nincs találat</h3>
+        @if (searchText()) {
+          <p class="mb-2">Nincs a(z) „{{ searchText() }}” keresésnek megfelelő séf név vagy konyha szerint.</p>
+          <button type="button" class="btn btn-brand btn-sm" (click)="clearSearch()">Keresés törlése</button>
+        } @else {
+          <p class="mb-0">Jelenleg nincs elérhető séf.</p>
+        }
+      </div>
+    } @else {
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3" data-testid="chef-list">
+        @for (chef of visibleChefs(); track chef.id) {
+          <div class="col">
+            <app-chef-card [chef]="chef" [selected]="selectedChef()?.id === chef.id" (book)="selectChef($event)" />
+          </div>
+        }
+      </div>
+    }
+  }
+</section>

@@ -1,0 +1,14 @@
+<section class="container section-block">
+  <div class="row g-4 g-md-5 align-items-center">
+    <div class="col-12 col-md-6" [class.order-md-2]="content().imageFirst">
+      <h2 class="info-title">
+        <span class="info-initial">{{ content().initial }}</span>{{ content().rest }}
+      </h2>
+      <h3 class="info-subtitle">{{ content().subtitle }}</h3>
+      <p class="section-text">{{ content().text }}</p>
+    </div>
+    <div class="col-12 col-md-6" [class.order-md-1]="content().imageFirst">
+      <img class="img-fluid section-image" [src]="content().image" [alt]="content().imageAlt" />
+    </div>
+  </div>
+</section>

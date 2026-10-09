@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 216" role="img" aria-label="Séf">
+  <rect width="328" height="216" fill="#eef7ef"/>
+  <g fill="#fff" stroke="#72dd78" stroke-width="5" stroke-linejoin="round">
+    <path d="M118 112c-22-4-32-26-20-44 8-12 24-14 36-8 6-18 36-18 44 0 14-8 32-2 38 12 8 18-6 36-26 40v34H118z"/>
+    <path d="M118 146h96v14H118z"/>
+  </g>
+  <path d="M142 112v34M166 106v40M190 112v34" stroke="#72dd78" stroke-width="4" stroke-linecap="round"/>
+</svg>

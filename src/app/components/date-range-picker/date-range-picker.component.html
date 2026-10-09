@@ -1,0 +1,45 @@
+<div class="calendar" role="group" aria-label="Bérlési időszak kiválasztása">
+  <div class="calendar-head">
+    <button type="button" class="nav-arrow" aria-label="Előző hónap" [disabled]="!canGoBack()" (click)="previousMonth()">&#10094;</button>
+    <select class="form-select form-select-sm" aria-label="Hónap" [value]="month()" (change)="setMonth($any($event.target).value)">
+      @for (name of months; track $index) {
+        <option [value]="$index + 1" [selected]="$index + 1 === month()">{{ name }}</option>
+      }
+    </select>
+    <select class="form-select form-select-sm" aria-label="Év" [value]="year()" (change)="setYear($any($event.target).value)">
+      @for (y of years(); track y) {
+        <option [value]="y" [selected]="y === year()">{{ y }}</option>
+      }
+    </select>
+    <button type="button" class="nav-arrow" aria-label="Következő hónap" (click)="nextMonth()">&#10095;</button>
+  </div>
+
+  <div class="calendar-grid weekdays" aria-hidden="true">
+    @for (w of weekdays; track $index) {
+      <span>{{ w }}</span>
+    }
+  </div>
+
+  <div class="calendar-grid" (mouseleave)="onHover(null)">
+    @for (b of blanks(); track $index) {
+      <span></span>
+    }
+    @for (cell of cells(); track cell.iso) {
+      <button
+        type="button"
+        class="day"
+        [class.start]="cell.isStart"
+        [class.end]="cell.isEnd"
+        [class.in-range]="cell.inRange"
+        [disabled]="cell.disabled"
+        [attr.aria-pressed]="cell.isStart || cell.isEnd"
+        [attr.aria-label]="cell.iso"
+        [attr.data-date]="cell.iso"
+        (click)="select(cell)"
+        (mouseenter)="onHover(cell)"
+      >
+        {{ cell.day }}
+      </button>
+    }
+  </div>
+</div>

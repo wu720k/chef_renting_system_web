@@ -1,0 +1,16 @@
+<section class="container section-block">
+  <div class="row g-4 g-md-5 align-items-start">
+    <div class="col-12 col-md-6">
+      <h1 class="hero-title">
+        <span class="hero-light">{{ hero.light }}</span>
+        <span class="hero-bold">{{ hero.bold }}</span>
+        <span class="hero-brand">{{ hero.brand }}</span>
+      </h1>
+      <!-- The reference shows this paragraph only from 768px up. -->
+      <p class="section-text d-none d-md-block">{{ hero.text }}</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <img class="img-fluid section-image" [src]="hero.image" [alt]="hero.imageAlt" />
+    </div>
+  </div>
+</section>

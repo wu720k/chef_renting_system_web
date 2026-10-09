@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Ricci",
+    "cuisine": "Italian",
+    "description": "An exceptional Italian chef specializing in traditional and modern cuisine with over a decade of experience.",
+    "image": "assets/images/chefs/chef-1.jpg",
+    "baseFee": 245,
+    "dailyRate": 175
+  },
+  {
+    "id": 2,
+    "name": "David Keller",
+    "cuisine": "French",
+    "description": "Award-winning French chef known for his creative flair and attention to classic techniques.",
+    "image": "assets/images/chefs/chef-2.jpg",
+    "baseFee": 270,
+    "dailyRate": 190
+  },
+  {
+    "id": 3,
+    "name": "Pamela Dawson",
+    "cuisine": "American",
+    "description": "Talented American chef renowned for her innovative dishes and passion for farm-to-table ingredients.",
+    "image": "assets/images/chefs/chef-3.jpg",
+    "baseFee": 275,
+    "dailyRate": 200
+  },
+  {
+    "id": 4,
+    "name": "Marcus Evans",
+    "cuisine": "European",
+    "description": "Highly skilled European chef blending traditional flavors with modern culinary artistry.",
+    "image": "assets/images/chefs/chef-4.jpg",
+    "baseFee": 280,
+    "dailyRate": 200
+  },
+  {
+    "id": 5,
+    "name": "Camila Ortega",
+    "cuisine": "Mexican",
+    "description": "Passionate Mexican chef celebrated for authentic flavors and colorful presentations.",
+    "image": "",
+    "baseFee": 265,
+    "dailyRate": 190
+  },
+  {
+    "id": 6,
+    "name": "Oscar Weber",
+    "cuisine": "German",
+    "description": "Dedicated German chef with expertise in hearty, traditional, and contemporary German cuisine.",
+    "image": "",
+    "baseFee": 240,
+    "dailyRate": 170
+  },
+  {
+    "id": 7,
+    "name": "Tiffany Moore",
+    "cuisine": "Vegetarian",
+    "description": "Innovative vegetarian chef who creates stunning plant-based dishes full of flavor and creativity.",
+    "image": "",
+    "baseFee": 270,
+    "dailyRate": 190
+  },
+  {
+    "id": 8,
+    "name": "Peter Novak",
+    "cuisine": "Eastern European",
+    "description": "Master of Eastern European cuisine, blending authentic recipes with a modern twist.",
+    "image": "",
+    "baseFee": 245,
+    "dailyRate": 175
+  },
+  {
+    "id": 9,
+    "name": "Olivia Bennett",
+    "cuisine": "Asian",
+    "description": "Talented Asian cuisine expert known for fresh, vibrant flavors and beautiful plating.",
+    "image": "",
+    "baseFee": 250,
+    "dailyRate": 180
+  },
+  {
+    "id": 10,
+    "name": "Roberto Holz",
+    "cuisine": "Argentinian",
+    "description": "Expert Argentinian chef specializing in grilled meats and traditional South American dishes.",
+    "image": "",
+    "baseFee": 300,
+    "dailyRate": 210
+  },
+  {
+    "id": 11,
+    "name": "Claire Johnson",
+    "cuisine": "Greek",
+    "description": "Gifted Greek chef delivering authentic Mediterranean flavors with a contemporary style.",
+    "image": "",
+    "baseFee": 260,
+    "dailyRate": 185
+  },
+  {
+    "id": 12,
+    "name": "Carlos Mendes",
+    "cuisine": "Portuguese",
+    "description": "Authentic Portuguese chef celebrated for his mastery of seafood and traditional pastries.",
+    "image": "",
+    "baseFee": 235,
+    "dailyRate": 165
+  },
+  {
+    "id": 13,
+    "name": "Nina Kim",
+    "cuisine": "Korean",
+    "description": "Innovative Korean chef bringing rich flavors and modern interpretations to classic dishes.",
+    "image": "",
+    "baseFee": 250,
+    "dailyRate": 180
+  },
+  {
+    "id": 14,
+    "name": "Trenin Nubiru",
+    "cuisine": "African",
+    "description": "Dynamic African cuisine specialist famous for bold spices and creative presentations.",
+    "image": "",
+    "baseFee": 275,
+    "dailyRate": 190
+  },
+  {
+    "id": 15,
+    "name": "Amelie Laurent",
+    "cuisine": "French",
+    "description": "Highly skilled French chef blending timeless recipes with a modern, artistic approach.",
+    "image": "",
+    "baseFee": 255,
+    "dailyRate": 185
+  },
+  {
+    "id": 16,
+    "name": "Victor Lee",
+    "cuisine": "Japanese",
+    "description": "Acclaimed Japanese chef with a passion for precision, freshness, and elegant plating.",
+    "image": "",
+    "baseFee": 265,
+    "dailyRate": 195
+  },
+  {
+    "id": 17,
+    "name": "Elisa Turner",
+    "cuisine": "British",
+    "description": "Talented British chef known for elevating classic comfort food with contemporary techniques.",
+    "image": "",
+    "baseFee": 235,
+    "dailyRate": 170
+  },
+  {
+    "id": 18,
+    "name": "Anil Sharma",
+    "cuisine": "Indian",
+    "description": "Master Indian chef delivering rich, authentic flavors with a creative and modern flair.",
+    "image": "",
+    "baseFee": 255,
+    "dailyRate": 185
+  },
+  {
+    "id": 19,
+    "name": "Isabelle Dubois",
+    "cuisine": "Belgian",
+    "description": "Passionate Belgian chef specializing in fine pastries, chocolates, and hearty Belgian meals.",
+    "image": "",
+    "baseFee": 240,
+    "dailyRate": 170
+  },
+  {
+    "id": 20,
+    "name": "Alejandro Torres",
+    "cuisine": "Spanish",
+    "description": "Experienced Spanish chef creating vibrant tapas and traditional Mediterranean specialties.",
+    "image": "",
+    "baseFee": 260,
+    "dailyRate": 185
+  },
+  {
+    "id": 21,
+    "name": "Greta Fischer",
+    "cuisine": "Austrian",
+    "description": "Exceptional Austrian chef bringing classic alpine dishes to life with a modern touch.",
+    "image": "",
+    "baseFee": 230,
+    "dailyRate": 165
+  },
+  {
+    "id": 22,
+    "name": "James Holt",
+    "cuisine": "Irish",
+    "description": "Skilled Irish chef renowned for his hearty, rustic cooking and warm hospitality.",
+    "image": "",
+    "baseFee": 230,
+    "dailyRate": 160
+  },
+  {
+    "id": 23,
+    "name": "Ava Martinez",
+    "cuisine": "Caribbean",
+    "description": "Creative Caribbean chef blending tropical flavors with vibrant, colorful presentations.",
+    "image": "",
+    "baseFee": 245,
+    "dailyRate": 175
+  },
+  {
+    "id": 24,
+    "name": "Nicolas Moreau",
+    "cuisine": "Swiss",
+    "description": "Expert Swiss chef excelling in fondue, chocolate creations, and traditional alpine dishes.",
+    "image": "",
+    "baseFee": 240,
+    "dailyRate": 170
+  },
+  {
+    "id": 25,
+    "name": "Brooke Baevsky",
+    "cuisine": "Modern American",
+    "description": "Visionary Modern American chef fusing global influences into stunning contemporary dishes.",
+    "image": "",
+    "baseFee": 280,
+    "dailyRate": 200
+  },
+  {
+    "id": 26,
+    "name": "Samir Patel",
+    "cuisine": "Middle Eastern",
+    "description": "Award-winning Middle Eastern chef creating rich, aromatic dishes with authentic spices.",
+    "image": "",
+    "baseFee": 250,
+    "dailyRate": 180
+  },
+  {
+    "id": 27,
+    "name": "Luca Bianchi",
+    "cuisine": "Italian",
+    "description": "Dedicated Italian chef with a passion for handcrafted pasta and rustic Mediterranean cuisine.",
+    "image": "",
+    "baseFee": 250,
+    "dailyRate": 180
+  }
+]

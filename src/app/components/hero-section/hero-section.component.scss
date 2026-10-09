@@ -1,0 +1,30 @@
+.hero-title {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.hero-light,
+.hero-bold,
+.hero-brand {
+  display: block;
+}
+
+.hero-light {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.hero-bold {
+  font-weight: 700;
+}
+
+.hero-brand {
+  font-weight: 700;
+  color: var(--brand);
+}
